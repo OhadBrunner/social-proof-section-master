@@ -1,0 +1,114 @@
+.container {
+  background-color: $color-light-blue;
+  width: 100vw;
+  height: 100vh;
+
+  &__box {
+    background-color: $color-white;
+    height: 40%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &--left {
+      background-color: green;
+      height: 100%;
+      width: 40%;
+      display: inline-block;
+
+      &__image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--right {
+      height: 100%;
+      width: 60%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .details {
+    width: 45%;
+    height: 20%;
+    position: absolute;
+    left: 3rem;
+    bottom: 2rem;
+
+    &__image {
+      border-radius: 100px;
+      height: 100%;
+      float: left;
+    }
+
+    &__text-secondary {
+      margin-left: 7rem;
+      margin-top: 5px;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    &__text-tertiary {
+      margin-left: 7rem;
+      margin-top: 5.5px;
+      font-weight: lighter;
+      font-size: 1.3rem;
+    }
+  }
+
+  .share {
+    background-color: $color-light-blue;
+    position: absolute;
+    border-radius: 100px;
+    bottom: 3rem;
+    right: 5rem;
+    width: 10%;
+    height: 15%;
+
+    &:hover {
+      background-color: $color-dark-blue;
+    }
+
+    &__image {
+      height: 40%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+
+  .visible {
+    width: 45%;
+    height: 60%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 23%, 60% 23%, 51% 31%, 43% 23%, 0 23%);
+    background-color: $color-dark-blue;
+    position: absolute;
+    right: -2.5rem;
+    bottom: -30px;
+
+  }
+
+  .text {
+    color: $color-light-blue;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    float: left;
+    text-transform: uppercase;
+  }
+
+  .images {
+    position: absolute;
+    right: 0;
+  }
+}

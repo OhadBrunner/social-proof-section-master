@@ -1,14 +1,15 @@
 {
-  "name": "social-proof-section-master",
+  "name": "article-preview-component-master",
   "version": "1.0.0",
-  "description": "![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)",
+  "description": "![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass SASS/main.scss CSS/styles.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
-  "author": "ohad brunner",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node": "^16.6.1",
     "node-sass": "^6.0.1"
   },
   "dependencies": {
