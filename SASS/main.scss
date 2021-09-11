@@ -1,0 +1,308 @@
+// SASS VARIABLES
+$color-primary-dark-purple: #512051;
+$color-primamry-light-purple: #927B91;
+$color-primary-pink: #EE69A4; // RESET
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'Spartan', sans-serif;
+}
+
+.background {
+  position: relative;
+  height: 100vh;
+
+  .top-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .bottom-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .top-container {
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 100%;
+
+    .left-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+
+      .big-title {
+        margin: 10% 20% 0 15%;
+        font-size: 5rem;
+        font-weight: 700;
+        color: $color-primary-dark-purple;
+      }
+
+      .description {
+        margin: 2% 20% 0 15%;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $color-primamry-light-purple;
+      }
+    }
+
+    .right-box {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      height: 100%;
+      width: 50%;
+
+      .stars-box {
+        background-color: lighten($color-primamry-light-purple, 42%);
+        border-radius: 10px;
+        width: 65%;
+        height: 15%;
+        margin-bottom: 2%;
+        position: relative;
+
+        .stars {
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: 5%;
+        }
+
+        .rating {
+          display: inline-block;
+          color: $color-primary-dark-purple;
+          font-weight: 700;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: 32%;
+          font-size: 1.2rem;
+        }
+      }
+
+      .stars-1 {
+        margin-top: 10%;
+        margin-left: 0;
+      }
+
+      .stars-2 {
+        margin-left: 6%;
+      }
+
+      .stars-3 {
+        margin-left: 12%;
+      }
+    }
+  }
+
+  .bottom-container {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    color: #fff;
+
+    .people {
+      background-color: $color-primary-dark-purple;
+      width: 27%;
+      height: 55%;
+      display: inline-block;
+      border-radius: 10px;
+      position: absolute;
+      font-weight: 400;
+
+      .name {
+        font-size: 1.2rem;
+        margin-top: 10%;
+      }
+
+      .who {
+        font-size: 1.2rem;
+        color: $color-primary-pink;
+        margin-top: 1%;
+      }
+
+      .about {
+        font-size: 1.2rem;
+        margin: 12% 3% 0 7%;
+      }
+    }
+
+    .face {
+      border-radius: 100%;
+      width: 10%;
+      float: left;
+      margin: 10% 5% 10% 7%;
+    }
+
+    .box-1 {
+      left: 7.5%;
+      top: 7%;
+    }
+
+    .box-2 {
+      left: 35%;
+      top: 14%;
+    }
+
+    .box-3 {
+      left: 62.5%;
+      top: 21%;
+    }
+  }
+}
+/* Moblie State */
+@media only screen and (max-width: 600px) {
+  .background {
+    .top-image {
+      position: absolute;
+      width: 50%;
+      height: 40%;
+    }
+
+    .bottom-image {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+    }
+
+    .top-container {
+      .left-box {
+        height: 50%;
+        width: 100%;
+
+        .big-title {
+          margin: 5% 25% 0;
+          font-size: 3rem;
+          text-align: center;
+        }
+
+        .description {
+          margin: 3% 27% 0;
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+
+      .right-box {
+        height: 50%;
+        width: 100%;
+        margin-top: 180px;
+
+        .stars-box {
+          width: 65%;
+          height: 27%;
+          position: relative;
+          margin: 0 auto 2%;
+
+          .stars {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 3%;
+          }
+
+          .rating {
+            color: $color-primary-dark-purple;
+            font-weight: 700;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            margin-left: 40%;
+          }
+        }
+
+        .stars-1 {}
+
+        .stars-2 {}
+
+        .stars-3 {}
+      }
+    }
+
+    .bottom-container {
+      position: absolute;
+      bottom: 0;
+      height: 50%;
+      width: 100%;
+
+      .people-box {
+        position: absolute;
+        height: 95%;
+        width: 95%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+
+        .people {
+          width: 85%;
+          height: 20%;
+          display: block;
+
+          .name {
+            font-size: 0.8rem;
+            margin-top: 2%;
+          }
+
+          .who {
+            font-size: 0.8rem;
+            color: $color-primary-pink;
+            margin-top: 1%;
+          }
+
+          .about {
+            font-size: 0.8rem;
+            margin: 1% 1% 0 0;
+            text-align: left;
+          }
+        }
+
+        .face {
+          border-radius: 100%;
+          width: 5%;
+          float: left;
+          margin: 3% 5% 10% 4%;
+        }
+
+        .box-1 {
+          left: auto;
+          right: auto;
+          top: 15%;
+        }
+
+        .box-2 {
+          left: auto;
+          top: 40%;
+        }
+
+        .box-3 {
+          left: auto;
+          top: 65%;
+        }
+      }
+    }
+  }
+}

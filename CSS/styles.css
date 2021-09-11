@@ -1,0 +1,208 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'Spartan', sans-serif; }
+
+.background {
+  position: relative;
+  height: 100vh; }
+  .background .top-image {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .background .bottom-image {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+  .background .top-container {
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 100%; }
+    .background .top-container .left-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%; }
+      .background .top-container .left-box .big-title {
+        margin: 10% 20% 0 15%;
+        font-size: 5rem;
+        font-weight: 700;
+        color: #512051; }
+      .background .top-container .left-box .description {
+        margin: 2% 20% 0 15%;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #927B91; }
+    .background .top-container .right-box {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      height: 100%;
+      width: 50%; }
+      .background .top-container .right-box .stars-box {
+        background-color: #f3f0f3;
+        border-radius: 10px;
+        width: 65%;
+        height: 15%;
+        margin-bottom: 2%;
+        position: relative; }
+        .background .top-container .right-box .stars-box .stars {
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: 5%; }
+        .background .top-container .right-box .stars-box .rating {
+          display: inline-block;
+          color: #512051;
+          font-weight: 700;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: 32%;
+          font-size: 1.2rem; }
+      .background .top-container .right-box .stars-1 {
+        margin-top: 10%;
+        margin-left: 0; }
+      .background .top-container .right-box .stars-2 {
+        margin-left: 6%; }
+      .background .top-container .right-box .stars-3 {
+        margin-left: 12%; }
+  .background .bottom-container {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    color: #fff; }
+    .background .bottom-container .people {
+      background-color: #512051;
+      width: 27%;
+      height: 55%;
+      display: inline-block;
+      border-radius: 10px;
+      position: absolute;
+      font-weight: 400; }
+      .background .bottom-container .people .name {
+        font-size: 1.2rem;
+        margin-top: 10%; }
+      .background .bottom-container .people .who {
+        font-size: 1.2rem;
+        color: #EE69A4;
+        margin-top: 1%; }
+      .background .bottom-container .people .about {
+        font-size: 1.2rem;
+        margin: 12% 3% 0 7%; }
+    .background .bottom-container .face {
+      border-radius: 100%;
+      width: 10%;
+      float: left;
+      margin: 10% 5% 10% 7%; }
+    .background .bottom-container .box-1 {
+      left: 7.5%;
+      top: 7%; }
+    .background .bottom-container .box-2 {
+      left: 35%;
+      top: 14%; }
+    .background .bottom-container .box-3 {
+      left: 62.5%;
+      top: 21%; }
+
+/* Moblie State */
+@media only screen and (max-width: 600px) {
+  .background .top-image {
+    position: absolute;
+    width: 50%;
+    height: 40%; }
+  .background .bottom-image {
+    position: absolute;
+    width: 50%;
+    height: 50%; }
+  .background .top-container .left-box {
+    height: 50%;
+    width: 100%; }
+    .background .top-container .left-box .big-title {
+      margin: 5% 25% 0;
+      font-size: 3rem;
+      text-align: center; }
+    .background .top-container .left-box .description {
+      margin: 3% 27% 0;
+      font-size: 1rem;
+      text-align: center; }
+  .background .top-container .right-box {
+    height: 50%;
+    width: 100%;
+    margin-top: 180px; }
+    .background .top-container .right-box .stars-box {
+      width: 65%;
+      height: 27%;
+      position: relative;
+      margin: 0 auto 2%; }
+      .background .top-container .right-box .stars-box .stars {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 3%; }
+      .background .top-container .right-box .stars-box .rating {
+        color: #512051;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        margin-left: 40%; }
+  .background .bottom-container {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%; }
+    .background .bottom-container .people-box {
+      position: absolute;
+      height: 95%;
+      width: 95%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center; }
+      .background .bottom-container .people-box .people {
+        width: 85%;
+        height: 20%;
+        display: block; }
+        .background .bottom-container .people-box .people .name {
+          font-size: 0.8rem;
+          margin-top: 2%; }
+        .background .bottom-container .people-box .people .who {
+          font-size: 0.8rem;
+          color: #EE69A4;
+          margin-top: 1%; }
+        .background .bottom-container .people-box .people .about {
+          font-size: 0.8rem;
+          margin: 1% 1% 0 0;
+          text-align: left; }
+      .background .bottom-container .people-box .face {
+        border-radius: 100%;
+        width: 5%;
+        float: left;
+        margin: 3% 5% 10% 4%; }
+      .background .bottom-container .people-box .box-1 {
+        left: auto;
+        right: auto;
+        top: 15%; }
+      .background .bottom-container .people-box .box-2 {
+        left: auto;
+        top: 40%; }
+      .background .bottom-container .people-box .box-3 {
+        left: auto;
+        top: 65%; } }
