@@ -1,0 +1,57 @@
+.boxes {
+  position: relative;
+  top: 45%;
+  position: absolute;
+  bottom: 0;
+
+  &__column {
+
+  }
+
+  &__back-helper {
+    width: 30rem;
+    height: 20.5rem;
+    margin-bottom: $gutter-horizontal;
+    border-radius: 3px;
+    box-shadow: $shadow-black-1;
+
+    &--1 {
+      background-color: $color-turkiz;
+    }
+
+    &--2 {
+      background-color: $color-red;
+    }
+
+    &--3 {
+      background-color: $color-yellow;
+    }
+
+    &--4 {
+      background-color: $color-blue;
+    }
+  }
+
+  &__box {
+    background-color: $color-white;
+    width: 30rem;
+    height: 20rem;
+    border-radius: 3px;
+    position: relative;
+
+    &--2 {
+      margin-bottom: 50px;
+    }
+
+    &--image {
+      width: 5rem;
+      position: absolute;
+      right: 2rem;
+      bottom: 2rem;
+    }
+  }
+}
+
+.middle-box {
+  margin-top: -13rem;
+}
