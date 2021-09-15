@@ -15,103 +15,156 @@ html {
 body {
   box-sizing: border-box; }
 
-body {
-  font-family: 'Manrope', sans-serif;
-  color: #2D4059; }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem);
+    /*to make it go a bit further than bounce back to position 0*/ }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
-.headline {
-  margin: 3rem;
-  margin-bottom: 0;
-  font-weight: 700; }
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem);
+    /*to make it go a bit further than bounce back to position 0*/ }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.heading-primary {
+  font-size: 7rem;
+  font-weight: 400;
+  margin-top: 4rem;
+  letter-spacing: 1rem;
+  line-height: 7.5rem;
+  text-align: left; }
+  .heading-primary__were {
+    display: block;
+    font-weight: 300;
+    color: #E2C2B9; }
+  .heading-primary__coming {
+    display: block; }
+  .heading-primary__soon {
+    display: block; }
 
 .paragraph {
-  margin: 1.5rem 4rem 2rem 3rem;
-  font-size: 1.3rem;
-  font-weight: lighter;
-  color: #2d4059; }
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #E2C2B9;
+  padding-right: 58rem;
+  line-height: 2;
+  margin-top: 2rem; }
 
-.container {
-  background-color: #DBE3E5;
-  width: 100vw;
-  height: 100vh; }
-  .container__box {
-    background-color: #fff;
-    height: 40%;
-    width: 50%;
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-top-small {
+  margin-top: 2rem !important; }
+
+.u-margin-top-medium {
+  margin-top: 4rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.flyer {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: repeat-x;
+  background-position: left;
+  position: relative; }
+  .flyer__image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .container__box--left {
-      background-color: green;
-      height: 100%;
-      width: 40%;
-      display: inline-block; }
-      .container__box--left__image {
-        width: 100%;
-        height: 100%; }
-    .container__box--right {
-      height: 100%;
-      width: 60%;
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      right: 0; }
-  .container .details {
+    width: 35.55%;
+    top: 0;
+    right: 0; }
+
+.details {
+  padding: 3rem 15rem; }
+  .details__input-box {
+    color: #E2C2B9;
     width: 45%;
-    height: 20%;
-    position: absolute;
-    left: 3rem;
-    bottom: 2rem; }
-    .container .details__image {
-      border-radius: 100px;
-      height: 100%;
-      float: left; }
-    .container .details__text-secondary {
-      margin-left: 7rem;
-      margin-top: 5px;
-      font-weight: 700;
-      font-size: 1.3rem; }
-    .container .details__text-tertiary {
-      margin-left: 7rem;
-      margin-top: 5.5px;
-      font-weight: lighter;
-      font-size: 1.3rem; }
-  .container .share {
-    background-color: #DBE3E5;
-    position: absolute;
-    border-radius: 100px;
-    bottom: 3rem;
-    right: 5rem;
-    width: 10%;
-    height: 15%; }
-    .container .share:hover {
-      background-color: #2D4059; }
-    .container .share__image {
-      height: 40%;
+    padding: 2rem;
+    border-radius: 35px;
+    margin-top: 7rem;
+    border: 1px solid #E2C2B9;
+    position: relative; }
+    .details__input-box--email {
+      border-style: none;
+      color: inherit;
+      font-family: inherit;
+      letter-spacing: 0.05rem;
+      margin-left: 2rem; }
+      .details__input-box--email:focus, .details__input-box--email:active {
+        outline: none; }
+      .details__input-box--email::placeholder {
+        color: inherit; }
+    .details__input-box--img {
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-  .container .invisible {
-    visibility: hidden; }
-  .container .visible {
-    width: 45%;
-    height: 60%;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 23%, 60% 23%, 51% 31%, 43% 23%, 0 23%);
-    background-color: #2D4059;
-    position: absolute;
-    right: -2.5rem;
-    bottom: -30px; }
-  .container .text {
-    color: #DBE3E5;
-    letter-spacing: 5px;
-    font-weight: lighter;
-    float: left;
-    text-transform: uppercase; }
-  .container .images {
-    position: absolute;
-    right: 0; }
+      transform: translateY(-50%);
+      right: 14rem;
+      opacity: 0;
+      visibility: hidden; }
+    .details__input-box--btn, .details__input-box--btn:link, .details__input-box--btn:visited {
+      padding: 1.6rem 5rem;
+      border-radius: 35px;
+      border: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: #F6A9A9;
+      font-size: 2rem;
+      color: #fff;
+      text-decoration: none; }
+    .details__input-box--btn:active {
+      background-color: #fbd7d7;
+      transform: scale(1.1); }
+    .details__input-box--heading-error {
+      color: red;
+      font-weight: 300;
+      position: absolute;
+      top: 50%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .2s; }
+    .details__input-box--email:focus:invalid ~ .details__input-box--heading-error {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(4rem); }
+    .details__input-box--email:focus:invalid ~ .details__input-box--img {
+      opacity: 1;
+      visibility: visible; }
 
 .row {
   max-width: 114rem;
@@ -138,3 +191,7 @@ body {
     width: calc((2 * (100% - (18rem)) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc((3 * (100% - (18rem)) / 4) + (2 * 6rem)); }
+
+.section-main {
+  height: 100vh;
+  padding: 2rem; }
